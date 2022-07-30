@@ -13,6 +13,8 @@ public class UIManager : MonoBehaviour
 
     [SerializeField] private TMPro.TextMeshProUGUI levelNumberText;
 
+    public Camera UICamera;
+    
     private void Awake()
     {
         this.SetInstance(ref instance);

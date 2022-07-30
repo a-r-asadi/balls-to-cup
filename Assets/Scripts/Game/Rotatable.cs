@@ -14,11 +14,16 @@ public class Rotatable : MonoBehaviour
 
     private bool isMouseDown;
 
+    private Camera cam,
+        uiCam;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
 
         sensibility = GameManager.instance.config.RotationSensibility;
+
+        cam = Camera.main;
     }
 
     private void Update()
@@ -35,8 +40,10 @@ public class Rotatable : MonoBehaviour
             
             float xMovement = 0,
                 yMovement = 0;
+
+            Vector2 screenPoint = cam.WorldToScreenPoint(transform.position);
             
-            if (x > Screen.width * 0.5f)
+            if (x > screenPoint.x)
             {
                 yMovement = (Input.mousePosition.y - lastMousePosition.y) * sensibility;
             }
@@ -45,7 +52,7 @@ public class Rotatable : MonoBehaviour
                 yMovement = -(Input.mousePosition.y - lastMousePosition.y) * sensibility;
             }
 
-            if (y > Screen.height * 0.5f)
+            if (y > screenPoint.y)
             {
                 xMovement = -(Input.mousePosition.x - lastMousePosition.x) * sensibility;
             }
