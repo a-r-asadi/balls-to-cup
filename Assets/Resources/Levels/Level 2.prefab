@@ -7,6 +7,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2307459252136262868, guid: b10a25ac00820ad40aa0ddce2ff40090, type: 3}
+      propertyPath: cup
+      value: 
+      objectReference: {fileID: 2744564958948973684}
+    - target: {fileID: 2307459252136262868, guid: b10a25ac00820ad40aa0ddce2ff40090, type: 3}
+      propertyPath: tube
+      value: 
+      objectReference: {fileID: 8732802299801568528}
     - target: {fileID: 7639409504493114664, guid: b10a25ac00820ad40aa0ddce2ff40090, type: 3}
       propertyPath: m_LocalPosition.y
       value: -4
@@ -61,11 +69,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b10a25ac00820ad40aa0ddce2ff40090, type: 3}
---- !u!1 &8384753608749935733 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7639409504525675013, guid: b10a25ac00820ad40aa0ddce2ff40090, type: 3}
-  m_PrefabInstance: {fileID: 2186500383038768752}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8384753610252128683 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7639409506287917019, guid: b10a25ac00820ad40aa0ddce2ff40090, type: 3}
@@ -76,27 +79,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7639409504493114664, guid: b10a25ac00820ad40aa0ddce2ff40090, type: 3}
   m_PrefabInstance: {fileID: 2186500383038768752}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &8384753609047616790 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7639409504814967654, guid: b10a25ac00820ad40aa0ddce2ff40090, type: 3}
-  m_PrefabInstance: {fileID: 2186500383038768752}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &5248689866769649068
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8384753608749935733}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e3e65b272679f841bba95118e0c52be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  winPercentage: 0.75
-  tube: {fileID: 8732802299801568528}
-  cup: {fileID: 2744564958948973684}
-  ballsParent: {fileID: 8384753609047616790}
 --- !u!1001 &3341480270039266616
 PrefabInstance:
   m_ObjectHideFlags: 0

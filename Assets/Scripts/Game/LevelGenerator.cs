@@ -9,7 +9,8 @@ public class LevelGenerator : MonoBehaviour
 {
     public static LevelGenerator instance;
 
-    [SerializeField] private int uniqueLevelsCount;
+    [SerializeField] private int uniqueLevelsCount,
+        overrideLevelNumber;
 
     [SerializeField] private GameObject ballPrefab;
 
@@ -42,6 +43,12 @@ public class LevelGenerator : MonoBehaviour
         else
         {
             levelNumber = 1;
+            PlayerPrefs.SetInt("level", levelNumber);
+        }
+
+        if (overrideLevelNumber > 0)
+        {
+            levelNumber = overrideLevelNumber;
             PlayerPrefs.SetInt("level", levelNumber);
         }
         
