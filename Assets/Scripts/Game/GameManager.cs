@@ -8,6 +8,8 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
+
+    public GameConfig config;
     
     private void Awake()
     {
@@ -25,6 +27,7 @@ public class GameManager : MonoBehaviour
     {
         UIManager.instance.ShowWinMenu();
         currentState = State.Won;
+        LevelGenerator.instance.SetNextLevel();
     }
 
     public void Fail()
@@ -35,6 +38,14 @@ public class GameManager : MonoBehaviour
 
     public void Restart()
     {
+        UIManager.instance.Fade();
+        StartCoroutine(RestartInternal());
+    }
+
+    private IEnumerator RestartInternal()
+    {
+        yield return new WaitForSecondsRealtime(0.3f);
+        
         UIManager.instance.HideFailMenu();
         LevelGenerator.instance.Reset();
         LevelGenerator.instance.OnRestart();
@@ -43,6 +54,14 @@ public class GameManager : MonoBehaviour
 
     public void SetNextLevel()
     {
+        UIManager.instance.Fade();
+        StartCoroutine(SetNextLevelInternal());
+    }
+    
+    private IEnumerator SetNextLevelInternal()
+    {
+        yield return new WaitForSecondsRealtime(0.3f);
+        
         UIManager.instance.HideWinMenu();
         LevelGenerator.instance.Reset();
         LevelGenerator.instance.OnNextLevel();

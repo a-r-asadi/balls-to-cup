@@ -5,17 +5,20 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
+    private float maxVelocity;
     private Rigidbody rb;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
+
+        maxVelocity = GameManager.instance.config.BallMaxVelocity;
     }
 
     private void FixedUpdate()
     {
         Vector3 velocity = rb.velocity;
-        velocity = Mathf.Min(velocity.magnitude, 10) * velocity.normalized;
+        velocity = Mathf.Min(velocity.magnitude, maxVelocity) * velocity.normalized;
         rb.velocity = velocity;
     }
 

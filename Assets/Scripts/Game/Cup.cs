@@ -1,11 +1,14 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 
 public class Cup : MonoBehaviour
 {
     [SerializeField] private TMPro.TextMeshPro text;
+    [SerializeField] private ParticleSystem starParticles;
+    
     private List<Ball> balls;
 
     private int minCount;
@@ -13,6 +16,8 @@ public class Cup : MonoBehaviour
     private bool winFlag;
 
     public int InsideBallsCount => balls.Count;
+
+    private Tweener scaleTween;
 
     public void Init(int minCount)
     {
@@ -32,7 +37,7 @@ public class Cup : MonoBehaviour
             }
 
             balls.Add(newBall);
-            UpdateText();
+            UpdateText(true);
 
             if (winFlag)
             {
@@ -63,13 +68,22 @@ public class Cup : MonoBehaviour
             }
         }
 
-    private void UpdateText()
+    private void UpdateText(bool hasEffect = false)
     {
         text.text = $"{balls.Count}/{minCount}";
+
+        if (hasEffect)
+        {
+            scaleTween?.Kill();
+            text.transform.localScale = Vector3.one;
+            scaleTween = text.transform.DOScale(1.1f, 0.15f).SetLoops(2, LoopType.Yoyo);
+        }
     }
 
     private IEnumerator SetWin()
     {
+        starParticles.gameObject.SetActive(true);
+        
         yield return new WaitForSecondsRealtime(1f);
 
         if (GameManager.instance.GetState() == GameManager.State.Playing &&

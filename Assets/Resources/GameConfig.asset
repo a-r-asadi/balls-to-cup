@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b2c5af1b5fd0204e9d828bd40a42d19, type: 3}
+  m_Name: GameConfig
+  m_EditorClassIdentifier: 
+  rotationSensibility: 0.25
+  ballMaxVelocity: 10
+  uniqueLevelsCount: 3
+  overrideLevelNumber: -1
+  minBallsCount: 20
+  maxBallsCount: 100
+  ballMaterials:
+  - {fileID: 2100000, guid: 5fa698e7524760042ac8f9dbf51a9605, type: 2}
+  - {fileID: 2100000, guid: f9c77db78935bd8418f85f428948a018, type: 2}
+  - {fileID: 2100000, guid: fc12324b5e0f3e44b947f4b2f75c126d, type: 2}
+  - {fileID: 2100000, guid: 8eff23eb0fb663f43a4d43aaf5748808, type: 2}
+  - {fileID: 2100000, guid: 60480e19dbe9fd74a950bb1e71aa7d00, type: 2}

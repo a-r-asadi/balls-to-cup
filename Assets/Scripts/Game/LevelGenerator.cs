@@ -9,16 +9,8 @@ public class LevelGenerator : MonoBehaviour
 {
     public static LevelGenerator instance;
 
-    [SerializeField] private int uniqueLevelsCount,
-        overrideLevelNumber;
-
     [SerializeField] private GameObject ballPrefab;
 
-    [SerializeField] private int minBallsCount,
-        maxBallsCount;
-    
-    [SerializeField] private Material[] ballMaterials;
-    
     private int levelNumber;
     private int levelMinBallCount;
 
@@ -46,9 +38,9 @@ public class LevelGenerator : MonoBehaviour
             PlayerPrefs.SetInt("level", levelNumber);
         }
 
-        if (overrideLevelNumber > 0)
+        if (GameManager.instance.config.OverrideLevelNumber > 0)
         {
-            levelNumber = overrideLevelNumber;
+            levelNumber = GameManager.instance.config.OverrideLevelNumber;
             PlayerPrefs.SetInt("level", levelNumber);
         }
         
@@ -56,10 +48,14 @@ public class LevelGenerator : MonoBehaviour
         GenerateLevel();
     }
 
-    public void OnNextLevel()
+    public void SetNextLevel()
     {
         levelNumber++;
         PlayerPrefs.SetInt("level", levelNumber);
+    }
+
+    public void OnNextLevel()
+    {
         GenerateLevel();
     }
     
@@ -86,26 +82,36 @@ public class LevelGenerator : MonoBehaviour
         {
             return;
         }
-        
-        for (int i = 0; i < levelBalls.Count; i++)
+
+        if (!HasAllBallsFellDown())
         {
-            if (levelBalls[i].transform.position.y > level.Cup.transform.parent.position.y)
-            {
-                failFlag = false;
-                return;
-            }
+            failFlag = false;
+            return;
         }
 
         if (failFlag)
         {
             return;
         }
-        
+
         if (level.Cup.InsideBallsCount < levelMinBallCount)
         {
             failFlag = true;
             StartCoroutine(SetFail());
         }
+    }
+
+    private bool HasAllBallsFellDown()
+    {
+        for (int i = 0; i < levelBalls.Count; i++)
+        {
+            if (levelBalls[i].transform.position.y > level.Cup.transform.parent.position.y)
+            {
+                return false;
+            }
+        }
+
+        return true;
     }
 
     private void GenerateLevel()
@@ -117,12 +123,14 @@ public class LevelGenerator : MonoBehaviour
 
         UIManager.instance.SetLevelNumber(levelNumber);
 
-        int commonLevelNumber = (levelNumber - 1) % uniqueLevelsCount + 1;
+        int commonLevelNumber = (levelNumber - 1) % GameManager.instance.config.UniqueLevelsCount + 1;
         string path = $"Levels/Level {commonLevelNumber}";
         
         level = Instantiate(Resources.Load<GameObject>(path), Vector3.zero, Quaternion.identity)
             .GetComponent<Level>();
 
+        int minBallsCount = GameManager.instance.config.MINBallsCount;
+        int maxBallsCount = GameManager.instance.config.MAXBallsCount;
         int ballsCount = new System.Random(levelNumber).Next(minBallsCount, maxBallsCount + 1) / 10 * 10;
 
         StartCoroutine(GenerateBalls(ballsCount));
@@ -135,6 +143,7 @@ public class LevelGenerator : MonoBehaviour
 
     private IEnumerator GenerateBalls(int count)
     {
+        Material[] ballMaterials = GameManager.instance.config.BallMaterials;
         for (int i = 0; i < count; i++)
         {
             GameObject newBall = Instantiate(ballPrefab, 

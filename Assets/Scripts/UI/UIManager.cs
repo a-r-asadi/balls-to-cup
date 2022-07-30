@@ -8,7 +8,8 @@ public class UIManager : MonoBehaviour
     public static UIManager instance;
     
     [SerializeField] private UIMenu winMenu,
-        failMenu;
+        failMenu,
+        fadeMenu;
 
     [SerializeField] private TMPro.TextMeshProUGUI levelNumberText;
 
@@ -40,5 +41,10 @@ public class UIManager : MonoBehaviour
     public void HideFailMenu()
     {
         failMenu.Hide();
+    }
+
+    public void Fade()
+    {
+        fadeMenu.FadeInOut();
     }
 }

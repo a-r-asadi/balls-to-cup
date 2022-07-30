@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Rotatable : MonoBehaviour
 {
-    [SerializeField] private float sensibility;
+    private float sensibility;
 
     [SerializeField] private float maxRotation;
     
@@ -17,6 +17,8 @@ public class Rotatable : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
+
+        sensibility = GameManager.instance.config.RotationSensibility;
     }
 
     private void Update()
