@@ -15,7 +15,7 @@ MonoBehaviour:
   rotationSensibility: 0.25
   ballMaxVelocity: 10
   uniqueLevelsCount: 6
-  overrideLevelNumber: 1
+  overrideLevelNumber: 4
   minBallsCount: 20
   maxBallsCount: 100
   ballMaterials:

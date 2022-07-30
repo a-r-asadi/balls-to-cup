@@ -44,9 +44,13 @@ public class Tube : MonoBehaviour
         
         float length = spline.GetSplineLength();
         float distanceTraveled = 0;
+        bool reversed = spline.NextDataPoint(0).Position.y < 
+                        spline.NextDataPoint(length - 0.1f).Position.y;
+
         for (int i = 0; i < length; i++)
         {
-            SplineData data = spline.NextDataPoint(distanceTraveled);
+            SplineData data = !reversed ? spline.NextDataPoint(distanceTraveled) : 
+                               spline.NextDataPoint(length - 1 - distanceTraveled);
 
             if (i == 0)
             {
@@ -54,6 +58,12 @@ public class Tube : MonoBehaviour
             }
 
             Vector3 position = 0.04f * (data.Position - firstPoint);
+            if (position.y < 0)
+            {
+                position.y *= -1;
+            }
+            position.y += emptyTube.transform.position.y + 0.25f;
+            
             points.Add(position);
 
             List<SplinePoint> splinePoints = new List<SplinePoint>();

@@ -151,7 +151,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1649511769807007390}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 834544616539252372}
@@ -206,7 +206,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseCenterPlaceholder: {fileID: 3829405781656978681}
   emptyTube: {fileID: 390059852001580169}
-  spline: {fileID: 0}
+  svgName: 
 --- !u!114 &2470164257527439571
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -219,7 +219,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdb79ebb43593bd4fac31c3335aa6ce7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensibility: 0.25
   maxRotation: 300
 --- !u!54 &7777239100814646604
 Rigidbody:

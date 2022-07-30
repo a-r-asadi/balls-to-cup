@@ -119,6 +119,12 @@ public class LevelGenerator : MonoBehaviour
         if (level)
         {
             Destroy(level.gameObject);
+            if (GetComponentInChildren<Spline>())
+            {
+                GameObject splineObject = GetComponentInChildren<Spline>().gameObject;
+                splineObject.transform.SetParent(null);
+                Destroy(splineObject);
+            }
         }
 
         UIManager.instance.SetLevelNumber(levelNumber);
@@ -153,6 +159,8 @@ public class LevelGenerator : MonoBehaviour
 
             int randomColorIndex = Random.Range(0, ballMaterials.Length);
             newBall.GetComponent<Ball>().SetMaterial(ballMaterials[randomColorIndex]);
+            newBall.GetComponent<Rigidbody>().velocity = Vector3.zero;
+            
             levelBalls.Add(newBall.GetComponent<Ball>());
 
             yield return new WaitForSeconds(0.3f / count);
