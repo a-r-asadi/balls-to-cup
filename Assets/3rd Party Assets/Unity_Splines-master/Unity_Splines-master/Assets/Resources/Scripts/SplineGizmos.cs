@@ -158,6 +158,7 @@ public class SplineGizmos : MonoBehaviour
 	// Check to see which/if user clicked on a Gizmo - call appropriate function.
 	void RaycastGizmos()
 	{
+#if UNITY_EDITOR
 		Ray ray = HandleUtility.GUIPointToWorldRay(Event.current.mousePosition);
 		RaycastHit hitData = new RaycastHit();
 		
@@ -177,5 +178,6 @@ public class SplineGizmos : MonoBehaviour
 		{
 			spline.RemovePoint(true);
 		}
+#endif
 	}
 }
