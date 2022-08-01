@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
 using UnityEngine;
 using UnityEditor;
 using System.IO;
@@ -41,7 +42,7 @@ public static class SVGHandler
         Regex partialPathReg = new Regex(@"\s*<path.*\sd=""");
 
         List<string> paths = new List<string>();
-        StreamReader reader = new StreamReader(filePath); 
+        StreamReader reader = new StreamReader(filePath);
 		
         string line = " ";
 		Match m;
@@ -297,14 +298,16 @@ public static class SVGHandler
 			{
 				if (i > 0 && (t[i] == '-' && t[i - 1] != 'e') || (t[i] == '+' && t[i - 1] != 'e'))
 				{
-					result.Add(float.Parse(t.Substring(start, i - start)));
+					float x = float.Parse(t.Substring(start, i - start), NumberFormatInfo.InvariantInfo);
+					result.Add(x);
 					start = i;
 				}
 			}
 
 			if (start < t.Length)
 			{
-				result.Add(float.Parse(t.Substring(start, t.Length - start)));
+				float x = float.Parse(t.Substring(start, t.Length - start), NumberFormatInfo.InvariantInfo);
+				result.Add(x);
 			}
 		}
 

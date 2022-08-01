@@ -142,6 +142,10 @@ PrefabInstance:
       propertyPath: svgName
       value: Vector 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3491630164986603029, guid: 192d45e42d3b3124eadfe4a387ebf2ec, type: 3}
+      propertyPath: fileSource
+      value: 
+      objectReference: {fileID: 102900000, guid: 18fb7daff8aa11e47b7b397c8335fc43, type: 3}
     - target: {fileID: 8347519134581801968, guid: 192d45e42d3b3124eadfe4a387ebf2ec, type: 3}
       propertyPath: m_Name
       value: Tube

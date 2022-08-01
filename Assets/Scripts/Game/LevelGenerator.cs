@@ -28,6 +28,14 @@ public class LevelGenerator : MonoBehaviour
     
     private void Start()
     {
+        int i = 1;
+        while (FileUtils.StreamingAssetExists($"SVGs/Vector {i}.svg"))
+        {
+            string persistentPath = $"SVGs/Vector {i}.svg";
+            FileUtils.CopyFromStreamingToPersistent($"SVGs/Vector {i}.svg", persistentPath);
+            i++;
+        }
+
         if (PlayerPrefs.HasKey("level"))
         {
             levelNumber = PlayerPrefs.GetInt("level");
