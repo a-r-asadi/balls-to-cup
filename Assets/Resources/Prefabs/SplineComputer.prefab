@@ -52,7 +52,7 @@ MonoBehaviour:
   editorUpdateMode: 0
   multithreaded: 0
   rebuildOnAwake: 0
-  updateMode: 0
+  updateMode: 1
   triggerGroups: []
   spline:
     points:
@@ -85,7 +85,7 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    sampleRate: 10
+    sampleRate: 2
   _rawSamples:
   - position: {x: 0.26469165, y: 0, z: 0}
     up: {x: 0, y: 0, z: -1}
@@ -93,54 +93,6 @@ MonoBehaviour:
     color: {r: 1, g: 1, b: 1, a: 1}
     size: 1
     percent: 0
-  - position: {x: 0.27714413, y: 0, z: 0}
-    up: {x: 0, y: 0, z: -1}
-    forward: {x: 1, y: 0, z: 0}
-    color: {r: 1, g: 1, b: 1, a: 1}
-    size: 1
-    percent: 0.1111111111111111
-  - position: {x: 0.2895966, y: 0, z: 0}
-    up: {x: 0, y: 0, z: -1}
-    forward: {x: 1, y: 0, z: 0}
-    color: {r: 1, g: 1, b: 1, a: 1}
-    size: 1
-    percent: 0.2222222222222222
-  - position: {x: 0.30204907, y: 0, z: 0}
-    up: {x: 0, y: 0, z: -1}
-    forward: {x: 1, y: 0, z: 0}
-    color: {r: 1, g: 1, b: 1, a: 1}
-    size: 1
-    percent: 0.3333333333333333
-  - position: {x: 0.31450155, y: 0, z: 0}
-    up: {x: 0, y: 0, z: -1}
-    forward: {x: 1, y: 0, z: 0}
-    color: {r: 1, g: 1, b: 1, a: 1}
-    size: 1
-    percent: 0.4444444444444444
-  - position: {x: 0.326954, y: 0, z: 0}
-    up: {x: 0, y: 0, z: -1}
-    forward: {x: 1, y: 0, z: 0}
-    color: {r: 1, g: 1, b: 1, a: 1}
-    size: 1
-    percent: 0.5555555555555556
-  - position: {x: 0.3394065, y: 0, z: 0}
-    up: {x: 0, y: 0, z: -1}
-    forward: {x: 1, y: 0, z: 0}
-    color: {r: 1, g: 1, b: 1, a: 1}
-    size: 1
-    percent: 0.6666666666666666
-  - position: {x: 0.35185897, y: 0, z: 0}
-    up: {x: 0, y: 0, z: -1}
-    forward: {x: 1, y: 0, z: 0}
-    color: {r: 1, g: 1, b: 1, a: 1}
-    size: 1
-    percent: 0.7777777777777778
-  - position: {x: 0.36431143, y: 0, z: 0}
-    up: {x: 0, y: 0, z: -1}
-    forward: {x: 1, y: 0, z: 0}
-    color: {r: 1, g: 1, b: 1, a: 1}
-    size: 1
-    percent: 0.8888888888888888
   - position: {x: 0.3767639, y: 0, z: 0}
     up: {x: 0, y: 0, z: -1}
     forward: {x: 1, y: 0, z: 0}
@@ -154,54 +106,6 @@ MonoBehaviour:
     color: {r: 1, g: 1, b: 1, a: 1}
     size: 1
     percent: 0
-  - position: {x: 0.27714413, y: 0, z: 0}
-    up: {x: 0, y: 0, z: -1}
-    forward: {x: 1, y: 0, z: 0}
-    color: {r: 1, g: 1, b: 1, a: 1}
-    size: 1
-    percent: 0.1111111111111111
-  - position: {x: 0.2895966, y: 0, z: 0}
-    up: {x: 0, y: 0, z: -1}
-    forward: {x: 1, y: 0, z: 0}
-    color: {r: 1, g: 1, b: 1, a: 1}
-    size: 1
-    percent: 0.2222222222222222
-  - position: {x: 0.30204907, y: 0, z: 0}
-    up: {x: 0, y: 0, z: -1}
-    forward: {x: 1, y: 0, z: 0}
-    color: {r: 1, g: 1, b: 1, a: 1}
-    size: 1
-    percent: 0.3333333333333333
-  - position: {x: 0.31450155, y: 0, z: 0}
-    up: {x: 0, y: 0, z: -1}
-    forward: {x: 1, y: 0, z: 0}
-    color: {r: 1, g: 1, b: 1, a: 1}
-    size: 1
-    percent: 0.4444444444444444
-  - position: {x: 0.326954, y: 0, z: 0}
-    up: {x: 0, y: 0, z: -1}
-    forward: {x: 1, y: 0, z: 0}
-    color: {r: 1, g: 1, b: 1, a: 1}
-    size: 1
-    percent: 0.5555555555555556
-  - position: {x: 0.3394065, y: 0, z: 0}
-    up: {x: 0, y: 0, z: -1}
-    forward: {x: 1, y: 0, z: 0}
-    color: {r: 1, g: 1, b: 1, a: 1}
-    size: 1
-    percent: 0.6666666666666666
-  - position: {x: 0.35185897, y: 0, z: 0}
-    up: {x: 0, y: 0, z: -1}
-    forward: {x: 1, y: 0, z: 0}
-    color: {r: 1, g: 1, b: 1, a: 1}
-    size: 1
-    percent: 0.7777777777777778
-  - position: {x: 0.36431143, y: 0, z: 0}
-    up: {x: 0, y: 0, z: -1}
-    forward: {x: 1, y: 0, z: 0}
-    color: {r: 1, g: 1, b: 1, a: 1}
-    size: 1
-    percent: 0.8888888888888888
   - position: {x: 0.3767639, y: 0, z: 0}
     up: {x: 0, y: 0, z: -1}
     forward: {x: 1, y: 0, z: 0}
@@ -216,54 +120,6 @@ MonoBehaviour:
       color: {r: 1, g: 1, b: 1, a: 1}
       size: 1
       percent: 0
-    - position: {x: 0.27714413, y: 0, z: 0}
-      up: {x: 0, y: 0, z: -1}
-      forward: {x: 1, y: 0, z: 0}
-      color: {r: 1, g: 1, b: 1, a: 1}
-      size: 1
-      percent: 0.1111111111111111
-    - position: {x: 0.2895966, y: 0, z: 0}
-      up: {x: 0, y: 0, z: -1}
-      forward: {x: 1, y: 0, z: 0}
-      color: {r: 1, g: 1, b: 1, a: 1}
-      size: 1
-      percent: 0.2222222222222222
-    - position: {x: 0.30204907, y: 0, z: 0}
-      up: {x: 0, y: 0, z: -1}
-      forward: {x: 1, y: 0, z: 0}
-      color: {r: 1, g: 1, b: 1, a: 1}
-      size: 1
-      percent: 0.3333333333333333
-    - position: {x: 0.31450155, y: 0, z: 0}
-      up: {x: 0, y: 0, z: -1}
-      forward: {x: 1, y: 0, z: 0}
-      color: {r: 1, g: 1, b: 1, a: 1}
-      size: 1
-      percent: 0.4444444444444444
-    - position: {x: 0.326954, y: 0, z: 0}
-      up: {x: 0, y: 0, z: -1}
-      forward: {x: 1, y: 0, z: 0}
-      color: {r: 1, g: 1, b: 1, a: 1}
-      size: 1
-      percent: 0.5555555555555556
-    - position: {x: 0.3394065, y: 0, z: 0}
-      up: {x: 0, y: 0, z: -1}
-      forward: {x: 1, y: 0, z: 0}
-      color: {r: 1, g: 1, b: 1, a: 1}
-      size: 1
-      percent: 0.6666666666666666
-    - position: {x: 0.35185897, y: 0, z: 0}
-      up: {x: 0, y: 0, z: -1}
-      forward: {x: 1, y: 0, z: 0}
-      color: {r: 1, g: 1, b: 1, a: 1}
-      size: 1
-      percent: 0.7777777777777778
-    - position: {x: 0.36431143, y: 0, z: 0}
-      up: {x: 0, y: 0, z: -1}
-      forward: {x: 1, y: 0, z: 0}
-      color: {r: 1, g: 1, b: 1, a: 1}
-      size: 1
-      percent: 0.8888888888888888
     - position: {x: 0.3767639, y: 0, z: 0}
       up: {x: 0, y: 0, z: -1}
       forward: {x: 1, y: 0, z: 0}
@@ -271,18 +127,20 @@ MonoBehaviour:
       size: 1
       percent: 1
     optimizedIndices: 
-    sampleMode: 0
+    sampleMode: 1
     clipFrom: 0
     clipTo: 1
     loopSamples: 0
-  originalSamplePercents: []
-  _sampleCount: 10
+  originalSamplePercents:
+  - 0
+  - 1
+  _sampleCount: 2
   _is2D: 1
   hasSamples: 1
   pointsDirty: 0000
-  _optimizeAngleThreshold: 0.5
+  _optimizeAngleThreshold: 45
   _space: 1
-  _sampleMode: 0
+  _sampleMode: 1
   _subscribers:
   - {fileID: 5199233231308477020}
   nodes: []
@@ -336,8 +194,8 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5199233231308477021}
   m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -381,7 +239,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8e405fbab136934590641eb781310b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  updateMethod: 0
+  updateMethod: 1
   _spline: {fileID: 5199233230602178775}
   _autoUpdate: 1
   _rotationModifier:
@@ -404,54 +262,6 @@ MonoBehaviour:
       color: {r: 1, g: 1, b: 1, a: 1}
       size: 1
       percent: 0
-    - position: {x: 0.27714413, y: 0, z: 0}
-      up: {x: 0, y: 0, z: -1}
-      forward: {x: 1, y: 0, z: 0}
-      color: {r: 1, g: 1, b: 1, a: 1}
-      size: 1
-      percent: 0.1111111111111111
-    - position: {x: 0.2895966, y: 0, z: 0}
-      up: {x: 0, y: 0, z: -1}
-      forward: {x: 1, y: 0, z: 0}
-      color: {r: 1, g: 1, b: 1, a: 1}
-      size: 1
-      percent: 0.2222222222222222
-    - position: {x: 0.30204907, y: 0, z: 0}
-      up: {x: 0, y: 0, z: -1}
-      forward: {x: 1, y: 0, z: 0}
-      color: {r: 1, g: 1, b: 1, a: 1}
-      size: 1
-      percent: 0.3333333333333333
-    - position: {x: 0.31450155, y: 0, z: 0}
-      up: {x: 0, y: 0, z: -1}
-      forward: {x: 1, y: 0, z: 0}
-      color: {r: 1, g: 1, b: 1, a: 1}
-      size: 1
-      percent: 0.4444444444444444
-    - position: {x: 0.326954, y: 0, z: 0}
-      up: {x: 0, y: 0, z: -1}
-      forward: {x: 1, y: 0, z: 0}
-      color: {r: 1, g: 1, b: 1, a: 1}
-      size: 1
-      percent: 0.5555555555555556
-    - position: {x: 0.3394065, y: 0, z: 0}
-      up: {x: 0, y: 0, z: -1}
-      forward: {x: 1, y: 0, z: 0}
-      color: {r: 1, g: 1, b: 1, a: 1}
-      size: 1
-      percent: 0.6666666666666666
-    - position: {x: 0.35185897, y: 0, z: 0}
-      up: {x: 0, y: 0, z: -1}
-      forward: {x: 1, y: 0, z: 0}
-      color: {r: 1, g: 1, b: 1, a: 1}
-      size: 1
-      percent: 0.7777777777777778
-    - position: {x: 0.36431143, y: 0, z: 0}
-      up: {x: 0, y: 0, z: -1}
-      forward: {x: 1, y: 0, z: 0}
-      color: {r: 1, g: 1, b: 1, a: 1}
-      size: 1
-      percent: 0.8888888888888888
     - position: {x: 0.3767639, y: 0, z: 0}
       up: {x: 0, y: 0, z: -1}
       forward: {x: 1, y: 0, z: 0}
@@ -459,7 +269,7 @@ MonoBehaviour:
       size: 1
       percent: 1
     optimizedIndices: 
-    sampleMode: 0
+    sampleMode: 1
     clipFrom: 0
     clipTo: 1
     loopSamples: 0
@@ -482,7 +292,7 @@ MonoBehaviour:
   _clipTo: 1
   animClipFrom: 0
   animClipTo: 1
-  _sampleCount: 10
+  _sampleCount: 2
   startSampleIndex: 0
   multithreaded: 0
   buildOnAwake: 0
@@ -969,7 +779,7 @@ MonoBehaviour:
     _overrideNormal: 0
     _customNormal: {x: 0, y: 1, z: 0}
     _type: 0
-    _count: 100
+    _count: 25
     _autoCount: 0
     _spacing: 0
     _randomRotation: 0

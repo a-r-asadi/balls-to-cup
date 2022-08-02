@@ -1,3 +1,5 @@
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using Dreamteck.Splines;
 using UnityEngine;
@@ -54,7 +56,7 @@ public class Tube : MonoBehaviour
         bool reversed = spline.NextDataPoint(0).Position.y <
                         spline.NextDataPoint(length - 0.1f).Position.y;
 
-        for (int i = 0; i < length; i++)
+        for (int i = 0; i < length * 0.5f; i++)
         {
             SplineData data = !reversed
                 ? spline.NextDataPoint(distanceTraveled)
@@ -83,9 +85,17 @@ public class Tube : MonoBehaviour
             }
 
             splineComputer.SetPoints(splinePoints.ToArray());
-            distanceTraveled += 1f;
+            distanceTraveled += 2f;
 
             splineComputer.Rebuild();
         }
+
+        StartCoroutine(DisableAutoRebuild());
+    }
+
+    private IEnumerator DisableAutoRebuild()
+    {
+        yield return new WaitForFixedUpdate();
+        GetComponentInChildren<SplineMesh>().autoUpdate = false;
     }
 }
